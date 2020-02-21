@@ -1,11 +1,14 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './home';
+import TripDetails from './tripDetails';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Route exact path="/" component={Home} />
+      <Route path="/trip/:id" component={TripDetails} />
+    </Router>
   );
 }
 

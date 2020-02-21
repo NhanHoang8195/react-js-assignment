@@ -1,0 +1,42 @@
+$color_silver_tree_approx: #51bd8a;
+
+.trip-details-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .form-trip {
+    justify-content: center;
+    h1 {
+      text-align: center;
+      color: $color_silver_tree_approx;
+      width: 100%;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    input {
+      border-radius: 2px;
+      box-shadow: none;
+      width: 100%;
+      border: 1px solid $color_silver_tree_approx;
+      outline: none;
+      padding: 5px 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .footer-btn {
+    width: 100%;
+    text-align: center;
+    button {
+      width: 90px;
+      margin: 10px;
+      border-radius: 2px;
+      background-color: $color_silver_tree_approx;
+    }
+  }
+}
