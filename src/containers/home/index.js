@@ -1,19 +1,27 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { COLUMNS } from '../../constants';
-import { DataTable } from '../../components';
+import { DataTable, Select } from '../../components';
 import * as actions from './actions';
 import './stytes.scss';
+
+const OPTIONS = [
+  { label: 'Case 1 - Two', value: 'case1-two' },
+  { label: 'Case 2 - Empty', value: 'case2-empty' },
+  { label: 'Case 3 - Big', value: 'case3-big' },
+];
 
 
 function Home(props) {
   const { data } = props;
 
+  const [valueSelect, setValueSelect] = useState(OPTIONS[0].value);
+
   useEffect(() => {
-    props.actions.getTrips();
-  }, [props.actions]);
+    props.actions.getTrips(valueSelect);
+  }, [valueSelect]);
 
   /**
    * Function that handle click event on row. Should navigate to new page.
@@ -24,13 +32,19 @@ function Home(props) {
   function onClickRow(e, row) {
     props.history.push(`/trip/${row.trip_id}`);
   }
+  function onChangeSelect(e) {
+    setValueSelect(e.target.value);
+  }
   return (
     <div className="home-container container-fluid">
-      <div>
-        <h1>Trips</h1>
-        <select>
-          <option>aaaa</option>
-        </select>
+      <div className="home-body">
+        <h1 className="text-title">Trips</h1>
+        <Select
+          className="home-select"
+          options={OPTIONS}
+          value={valueSelect}
+          onChange={onChangeSelect}
+        />
         <DataTable
           columns={COLUMNS.TRIPS_TABLE}
           data={data}

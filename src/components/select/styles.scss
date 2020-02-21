@@ -1,0 +1,13 @@
+@import '../../styles';
+
+.react-js-assignemnt-select {
+  margin: 10px;
+  border-radius: 2px;
+  background-color: $color_silver_tree_approx;
+  border: 1px solid $color_silver_tree_approx;
+  height: 32px;
+  color: white;
+  &:focus {
+    outline: none;
+  }
+}

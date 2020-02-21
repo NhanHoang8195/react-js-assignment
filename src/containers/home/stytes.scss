@@ -1,0 +1,13 @@
+@import '../../styles';
+
+.home-container {
+  .home-body {
+    .text-title {
+      text-align: center;
+      color: $color_silver_tree_approx;
+    }
+    .home-select {
+      float: right;
+    }
+  }
+}

@@ -1,1 +1,1 @@
-export const TRIPS_API = '/recruitment/challenge';
+export const TRIPS_API = 'recruitment-challenge/{path}';

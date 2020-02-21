@@ -1,5 +1,5 @@
 export default function(data = {}) {
-  return Object.keys(data).map(k => {
+  const x =  Object.keys(data).map(k => {
     if(k === 'trip_id') {
       return { label: 'Trip Id', value: data[k] }
     }
@@ -17,4 +17,6 @@ export default function(data = {}) {
     }
     return { label: k, value: data[k] }
   });
+  console.log(x);
+  return x;
 }

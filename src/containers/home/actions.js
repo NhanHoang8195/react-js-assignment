@@ -3,11 +3,13 @@ import * as EVENT from './events';
 
 /**
  * Async action creator. Get trips
+ * @param {string} pathname param to get trip
  */
-export const getTrips = () => dispatch => {
+export const getTrips = (pathname) => dispatch => {
   dispatch({ type: EVENT.GET_TRIPS_START });
+  const url = API_URL.TRIPS_API.replace('{path}', pathname);
   const options = {
-    url: API_URL.TRIPS_API,
+    url,
     method: REQUEST_METHODS.GET,
   };
 

@@ -1,0 +1,86 @@
+@import '../../styles';
+.data-table {
+  .react-bootstrap-table {
+    .data-bootstrap-table {
+      tr > td, tr > th {
+        border: 2px solid $color_silver_tree_approx;
+      }
+      .react-bs-table-no-data {
+        font-size: 15px;
+      }
+      .custom-header-class {
+        font-size: 10px;
+      }
+      .custom-row-class {
+        font-size: 10px;
+      }
+      .time-formatted {
+        margin: 0;
+      }
+    }
+  }
+  .react-bootstrap-table-pagination {
+    button.dropdown-toggle {
+      background-color: $color_silver_tree_approx;
+      border: none;
+      &:focus, &:active {
+        background-color: $color_silver_tree_approx;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .dropdown-menu {
+      background-color: $color_silver_tree_approx;
+      li > a {
+        color: white;
+      }
+    }
+    .react-bootstrap-table-pagination-list {
+      li.active > a {
+        background-color: $color_silver_tree_approx;
+        border: none;
+      }
+    }
+  }
+
+}
+@media (max-width: 575px) {
+  .data-table {
+    .react-bootstrap-table-pagination {
+      .col-xs-6 {
+        .react-bs-table-sizePerPage-dropdown {
+          float: right;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .data-table {
+    .react-bootstrap-table {
+      .data-bootstrap-table {
+        .custom-header-class {
+          font-size: 12px;
+        }
+        .custom-row-class {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .data-table {
+    .react-bootstrap-table {
+      .data-bootstrap-table {
+        .custom-header-class {
+          font-size: 15px;
+        }
+        .custom-row-class {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
