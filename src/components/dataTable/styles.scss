@@ -10,9 +10,14 @@
       }
       .custom-header-class {
         font-size: 10px;
+        color: white;
+        background-color: $color_silver_tree_approx;
       }
       .custom-row-class {
         font-size: 10px;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .time-formatted {
         margin: 0;
