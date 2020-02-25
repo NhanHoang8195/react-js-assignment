@@ -5,10 +5,6 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 
 import './styles.scss';
 
-const PAGINATION_OPTIONS = {
-
-};
-
 function DataTable(props) {
   const { data, keyField, columns, rowEvents } = props;
 

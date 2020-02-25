@@ -11,7 +11,7 @@ function TripDetails(props) {
   const tripId = props.match.params.id;
   useEffect(() => {
     props.actions.getTripDetails(tripId);
-  }, [tripId]);
+  }, [props.actions, tripId]);
   if (isLoading) {
     return <div>Is getting data....</div>
   }

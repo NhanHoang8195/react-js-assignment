@@ -6,6 +6,7 @@ After clone this repo to your local machine, do following steps to run this app:
 Run command:
 1. ### `cd react-js-assignment/`
 2. ### `npm install`
+3. ### `Create .env file at root project and create a environment variable. See .env-sample`
 3. ### `npm start`
 
 After finished all of the commands above, you can open any browsers and   

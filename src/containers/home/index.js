@@ -21,7 +21,7 @@ function Home(props) {
 
   useEffect(() => {
     props.actions.getTrips(valueSelect);
-  }, [valueSelect]);
+  }, [props.actions, valueSelect]);
 
   /**
    * Function that handle click event on row. Should navigate to new page.
